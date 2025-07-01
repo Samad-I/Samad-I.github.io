@@ -1,84 +1,101 @@
 
-import { Mail, Phone, Globe, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 export const ContactSection = () => {
-  const contactMethods = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "abutalaha.inamdar@email.com",
-      href: "mailto:abutalaha.inamdar@email.com"
-    },
-    {
-      icon: Phone, 
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
-    },
-    {
-      icon: Globe,
-      label: "Portfolio",
-      value: "samad.dev",
-      href: "#"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "github.com/samad",
-      href: "#"
-    }
-  ];
-
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title">Get In Touch</h2>
-        
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-12 animate-fade-in">
-            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+    <section id="contact" className="py-20 bg-gray-100 dark:bg-gray-800 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Get In Touch
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+              Let's work together
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               I'm always interested in discussing new opportunities, innovative projects, 
-              or collaborating on cloud infrastructure solutions.
+              or collaborating on cloud infrastructure solutions. Feel free to reach out!
             </p>
-            <p className="text-lg text-muted-foreground">
-              Whether you're looking for an AWS DevOps Engineer or want to chat about 
-              the latest cloud technologies, feel free to reach out!
-            </p>
-          </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-center">
+                <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
+                <span className="text-gray-700 dark:text-gray-300">abutalaha.inamdar@email.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
+                <span className="text-gray-700 dark:text-gray-300">+91 9876543210</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
+                <span className="text-gray-700 dark:text-gray-300">Mumbai, India</span>
+              </div>
+            </div>
 
-          {/* Contact Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {contactMethods.map((method, index) => (
-              <a
-                key={index}
-                href={method.href}
-                className="skill-card text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <method.icon className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                <h4 className="font-semibold text-foreground mb-2">{method.label}</h4>
-                <p className="text-sm text-muted-foreground">{method.value}</p>
+            <div className="flex space-x-4 mt-8">
+              <a href="#" className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                <Linkedin size={20} />
               </a>
-            ))}
+              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-900 dark:hover:bg-gray-500 transition-colors">
+                <Github size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                <Mail size={20} />
+              </a>
+            </div>
           </div>
 
-          {/* CTA */}
-          <div className="animate-fade-in">
-            <a
-              href="mailto:abutalaha.inamdar@email.com"
-              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
-            >
-              Let's Work Together
-            </a>
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-sm transition-colors">
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
+                  placeholder="Your message..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <div className="mt-24 pt-8 border-t border-border text-center">
-        <p className="text-muted-foreground">
-          © 2024 Abutalaha Inamdar. Built with passion for cloud technologies.
-        </p>
+        <div className="mt-16 pt-8 border-t border-gray-300 dark:border-gray-600 text-center">
+          <p className="text-gray-600 dark:text-gray-300">
+            © 2024 Abutalaha Inamdar. All rights reserved.
+          </p>
+        </div>
       </div>
     </section>
   );

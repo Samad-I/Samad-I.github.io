@@ -1,100 +1,95 @@
 
-import { Cloud, Zap } from 'lucide-react';
-
 export const SkillsSection = () => {
-  const awsServices = [
-    "EC2 – Virtual servers",
-    "S3 – Storage",
-    "VPC – Networking", 
-    "IAM – Users, roles, policies",
-    "CloudWatch – Monitoring and logging",
-    "RDS & DynamoDB – Databases",
-    "ELB & Auto Scaling",
-    "CloudTrail"
-  ];
-
-  const devopsTools = [
-    "Docker – Containers",
-    "Kubernetes (EKS) – Container orchestration", 
-    "Terraform / AWS CloudFormation – Infrastructure as Code (IaC)",
-    "Jenkins / GitHub Actions / AWS CodePipeline – CI/CD",
-    "AWS CodeBuild / CodeDeploy"
-  ];
-
   const skillCategories = [
     {
-      title: "AWS Cloud Services",
-      icon: Cloud,
-      description: "Comprehensive experience with AWS core services",
-      skills: awsServices,
-      gradient: "from-blue-500 to-blue-600"
+      title: "Cloud Platforms",
+      skills: [
+        { name: "AWS EC2", level: 90 },
+        { name: "AWS S3", level: 95 },
+        { name: "AWS VPC", level: 85 },
+        { name: "AWS IAM", level: 90 }
+      ]
     },
     {
-      title: "DevOps Tools & Practices", 
-      icon: Zap,
-      description: "Modern DevOps toolchain and automation",
-      skills: devopsTools,
-      gradient: "from-indigo-500 to-indigo-600"
+      title: "Containerization & Orchestration",
+      skills: [
+        { name: "Docker", level: 90 },
+        { name: "Kubernetes", level: 85 },
+        { name: "EKS", level: 80 },
+        { name: "Container Registry", level: 85 }
+      ]
+    },
+    {
+      title: "CI/CD & DevOps Tools",
+      skills: [
+        { name: "Jenkins", level: 90 },
+        { name: "GitHub Actions", level: 85 },
+        { name: "AWS CodePipeline", level: 80 },
+        { name: "CodeBuild/Deploy", level: 85 }
+      ]
+    },
+    {
+      title: "Infrastructure as Code",
+      skills: [
+        { name: "Terraform", level: 90 },
+        { name: "CloudFormation", level: 85 },
+        { name: "Ansible", level: 80 },
+        { name: "CloudWatch", level: 85 }
+      ]
+    },
+    {
+      title: "Monitoring & Observability",
+      skills: [
+        { name: "CloudWatch", level: 90 },
+        { name: "CloudTrail", level: 85 },
+        { name: "Prometheus", level: 75 },
+        { name: "Grafana", level: 80 }
+      ]
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "RDS", level: 85 },
+        { name: "DynamoDB", level: 80 },
+        { name: "ElastiCache", level: 75 },
+        { name: "Aurora", level: 80 }
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title">Technical Skills</h2>
-        
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {skillCategories.map((category, index) => (
-              <div
-                key={index}
-                className="skill-card group animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${category.gradient} mr-4`}>
-                    <category.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
-                    <p className="text-muted-foreground text-sm">{category.description}</p>
-                  </div>
-                </div>
+    <section id="skills" className="py-20 bg-gray-100 dark:bg-gray-800 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Technical Skills
+          </h2>
+        </div>
 
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className="flex items-start"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                      <span className="text-muted-foreground leading-relaxed">{skill}</span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm transition-colors">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
+                {category.title}
+              </h3>
+              <div className="space-y-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex}>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{skill.name}</span>
+                      <span className="text-sm text-blue-600 dark:text-blue-400">{skill.level}%</span>
                     </div>
-                  ))}
-                </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div 
+                        className="bg-blue-600 dark:bg-blue-400 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* Additional Tech Badges */}
-          <div className="mt-16 text-center animate-fade-in">
-            <h3 className="text-2xl font-semibold text-foreground mb-8">Technologies I Work With</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {[
-                "AWS", "Docker", "Kubernetes", "Terraform", "Jenkins", "GitHub Actions",
-                "CloudFormation", "EC2", "S3", "VPC", "IAM", "CloudWatch", "RDS",
-                "DynamoDB", "ELB", "Auto Scaling", "CodePipeline", "CodeBuild", "CodeDeploy"
-              ].map((tech, index) => (
-                <span
-                  key={index}
-                  className="tech-badge animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {tech}
-                </span>
-              ))}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

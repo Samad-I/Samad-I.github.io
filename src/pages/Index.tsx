@@ -1,33 +1,35 @@
 
 import { useState, useEffect } from 'react';
+import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
+import { WorkExperienceSection } from '@/components/WorkExperienceSection';
+import { CertificationsSection } from '@/components/CertificationsSection';
+import { ProjectsSection } from '@/components/ProjectsSection';
 import { ContactSection } from '@/components/ContactSection';
-import { Navigation } from '@/components/Navigation';
 
 const Index = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Floating particles background */}
-      <div className="floating-particles fixed inset-0 pointer-events-none" />
-      
-      {/* Navigation */}
-      <Navigation />
-      
-      {/* Main content */}
-      <div className={`transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ContactSection />
-      </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <WorkExperienceSection />
+      <CertificationsSection />
+      <ProjectsSection />
+      <ContactSection />
     </div>
   );
 };
