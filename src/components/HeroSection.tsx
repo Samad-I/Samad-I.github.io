@@ -23,7 +23,7 @@ export const HeroSection = () => {
           {/* Greeting */}
           <div className="space-y-2">
             <p className="text-primary font-medium text-lg tracking-wide">Hello, I'm</p>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground">
               Abutalaha Inamdar
             </h1>
             <p className="text-2xl md:text-3xl text-muted-foreground font-mono">
@@ -44,13 +44,13 @@ export const HeroSection = () => {
 
           {/* Tech Icons */}
           <div className="flex justify-center space-x-8 mt-12">
-            <div className="p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:animate-glow">
+            <div className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
               <Cloud className="w-8 h-8 text-primary" />
             </div>
-            <div className="p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:animate-glow">
+            <div className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
               <Code className="w-8 h-8 text-primary" />
             </div>
-            <div className="p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:animate-glow">
+            <div className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
               <Zap className="w-8 h-8 text-primary" />
             </div>
           </div>
@@ -59,7 +59,7 @@ export const HeroSection = () => {
           <div className="pt-8">
             <button
               onClick={scrollToAbout}
-              className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
+              className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
             >
               Learn More About Me
               <ChevronDown className="inline-block ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />

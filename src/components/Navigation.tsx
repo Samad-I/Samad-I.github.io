@@ -32,11 +32,11 @@ export const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+          <div className="text-xl font-bold text-primary">
             Samad
           </div>
 
@@ -64,7 +64,7 @@ export const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-card rounded-lg border border-border animate-fade-in">
+          <div className="md:hidden mt-4 py-4 bg-card rounded-lg border border-border shadow-lg animate-fade-in">
             {navItems.map((item) => (
               <button
                 key={item.id}

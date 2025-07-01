@@ -1,5 +1,5 @@
 
-import { Cloud, Code, Database, Shield, Zap, Server } from 'lucide-react';
+import { Cloud, Zap } from 'lucide-react';
 
 export const SkillsSection = () => {
   const awsServices = [
@@ -27,19 +27,19 @@ export const SkillsSection = () => {
       icon: Cloud,
       description: "Comprehensive experience with AWS core services",
       skills: awsServices,
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-500 to-blue-600"
     },
     {
       title: "DevOps Tools & Practices", 
       icon: Zap,
       description: "Modern DevOps toolchain and automation",
       skills: devopsTools,
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-indigo-500 to-indigo-600"
     }
   ];
 
   return (
-    <section id="skills" className="py-24 bg-accent/20">
+    <section id="skills" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Technical Skills</h2>
         
@@ -52,7 +52,7 @@ export const SkillsSection = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.gradient} mr-4`}>
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${category.gradient} mr-4`}>
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>

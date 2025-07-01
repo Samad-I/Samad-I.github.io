@@ -30,7 +30,7 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Get In Touch</h2>
         
@@ -66,7 +66,7 @@ export const ContactSection = () => {
           <div className="animate-fade-in">
             <a
               href="mailto:abutalaha.inamdar@email.com"
-              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
             >
               Let's Work Together
             </a>
