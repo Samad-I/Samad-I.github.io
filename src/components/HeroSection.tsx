@@ -39,7 +39,7 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex justify-center lg:justify-start space-x-4 animate-fade-in">
-              <a href="#contact" className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+              <a href="mailto:abutalaha.inamdar@gmail.com" className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
                 <Mail size={20} />
               </a>
               <a href="https://github.com/samad-I" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 dark:bg-gray-700 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
@@ -53,11 +53,13 @@ export const HeroSection = () => {
           
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative group">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse">
-                <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner">
-                  <span className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    AI
-                  </span>
+              <div className="w-80 h-80 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse p-2">
+                <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/9db60c7a-b0bb-483f-9d3d-c13e74844c29.png" 
+                    alt="Abutalaha Inamdar" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 blur-xl group-hover:blur-2xl transition-all duration-500"></div>
