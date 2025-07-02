@@ -4,8 +4,6 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
-import { WorkExperienceSection } from '@/components/WorkExperienceSection';
-import { CertificationsSection } from '@/components/CertificationsSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { ContactSection } from '@/components/ContactSection';
 
@@ -21,13 +19,11 @@ const Index = () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500">
       <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <WorkExperienceSection />
-      <CertificationsSection />
       <ProjectsSection />
       <ContactSection />
     </div>
