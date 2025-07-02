@@ -24,28 +24,28 @@ export const HeroSection = () => {
                 </span>
               </h1>
               <div className="text-xl lg:text-2xl text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold mb-6 animate-fade-in">
-                DevOps Engineer & AWS Solution Architect
+                AWS DevOps Engineer
               </div>
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-lg animate-fade-in">
-              Passionate DevOps Engineer with expertise in AWS cloud services, automation, 
+              Passionate AWS DevOps Engineer with expertise in cloud services, automation, 
               and CI/CD pipelines. I help organizations build scalable, secure, and efficient infrastructure.
             </p>
             
             <div className="flex items-center justify-center lg:justify-start text-gray-600 dark:text-gray-300 mb-8 animate-fade-in">
               <MapPin size={20} className="mr-2 text-blue-600 dark:text-blue-400" />
-              <span>Based in India</span>
+              <span>Pune, India</span>
             </div>
 
             <div className="flex justify-center lg:justify-start space-x-4 animate-fade-in">
               <a href="#contact" className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
                 <Mail size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-gray-800 dark:bg-gray-700 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+              <a href="https://github.com/samad-I" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 dark:bg-gray-700 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
                 <Github size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+              <a href="https://www.linkedin.com/in/abutalaha-inamdar/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
                 <Linkedin size={20} />
               </a>
             </div>

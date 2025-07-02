@@ -4,55 +4,51 @@ export const SkillsSection = () => {
     {
       title: "Cloud Platforms",
       skills: [
-        { name: "AWS EC2", level: 75 },
-        { name: "AWS S3", level: 70 },
-        { name: "AWS VPC", level: 68 },
-        { name: "AWS IAM", level: 72 }
+        { name: "AWS EC2", level: 70 },
+        { name: "AWS S3", level: 65 },
+        { name: "AWS VPC", level: 63 },
+        { name: "AWS IAM", level: 68 }
       ]
     },
     {
       title: "Containerization & Orchestration",
       skills: [
-        { name: "Docker", level: 75 },
-        { name: "Kubernetes", level: 65 },
-        { name: "EKS", level: 60 },
-        { name: "Container Registry", level: 68 }
+        { name: "Docker", level: 70 },
+        { name: "Kubernetes", level: 60 },
+        { name: "EKS", level: 55 }
       ]
     },
     {
       title: "CI/CD & DevOps Tools",
       skills: [
-        { name: "Jenkins", level: 73 },
-        { name: "GitHub Actions", level: 70 },
-        { name: "AWS CodePipeline", level: 62 },
-        { name: "CodeBuild/Deploy", level: 65 }
+        { name: "Jenkins", level: 68 },
+        { name: "AWS CodePipeline", level: 60 },
+        { name: "CodeBuild/Deploy", level: 62 }
       ]
     },
     {
       title: "Infrastructure as Code",
       skills: [
-        { name: "Terraform", level: 72 },
-        { name: "CloudFormation", level: 68 },
-        { name: "Ansible", level: 60 },
-        { name: "CloudWatch", level: 70 }
+        { name: "Terraform", level: 67 },
+        { name: "CloudFormation", level: 63 },
+        { name: "Ansible", level: 55 }
       ]
     },
     {
       title: "Monitoring & Observability",
       skills: [
-        { name: "CloudWatch", level: 70 },
-        { name: "CloudTrail", level: 65 },
-        { name: "Prometheus", level: 60 },
-        { name: "Grafana", level: 62 }
+        { name: "CloudWatch", level: 65 },
+        { name: "CloudTrail", level: 60 },
+        { name: "Prometheus", level: 55 },
+        { name: "Grafana", level: 58 }
       ]
     },
     {
       title: "Databases",
       skills: [
-        { name: "RDS", level: 68 },
-        { name: "DynamoDB", level: 65 },
-        { name: "ElastiCache", level: 60 },
-        { name: "Aurora", level: 63 }
+        { name: "RDS", level: 63 },
+        { name: "DynamoDB", level: 60 },
+        { name: "ElastiCache", level: 55 }
       ]
     }
   ];

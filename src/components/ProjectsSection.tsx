@@ -38,15 +38,16 @@ export const ProjectsSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-all">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            <div key={index} className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200/20 dark:border-gray-700/20 group">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-200">
                 {project.description}
               </p>
               
@@ -54,7 +55,7 @@ export const ProjectsSection = () => {
                 {project.technologies.map((tech, techIndex) => (
                   <span 
                     key={techIndex}
-                    className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
+                    className="bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm group-hover:bg-blue-200 dark:group-hover:bg-blue-800/70 transition-colors duration-200"
                   >
                     {tech}
                   </span>
@@ -66,7 +67,7 @@ export const ProjectsSection = () => {
                   <a 
                     key={linkIndex}
                     href={link.url}
-                    className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline text-sm font-medium transition-colors duration-200"
                   >
                     {link.label}
                   </a>
