@@ -53,8 +53,8 @@ export const HeroSection = () => {
           
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative group">
-              <div className="w-72 h-72 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse p-1">
-                <div className="w-64 h-64 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner overflow-hidden">
+              <div className="w-96 h-96 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse p-1">
+                <div className="w-88 h-88 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner overflow-hidden">
                   <img 
                     src="/lovable-uploads/9db60c7a-b0bb-483f-9d3d-c13e74844c29.png" 
                     alt="Abutalaha Inamdar" 
