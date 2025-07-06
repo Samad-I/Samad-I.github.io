@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -46,6 +47,8 @@ export const ContactSection = () => {
         to_email: 'samadinamdar009@gmail.com'
       };
 
+      console.log('Attempting to send email with params:', templateParams);
+      
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       toast({
@@ -62,11 +65,21 @@ export const ContactSection = () => {
 
     } catch (error: any) {
       console.error('Error sending message:', error);
-      toast({
-        title: "Failed to send message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-      });
+      
+      // Handle specific EmailJS errors
+      if (error.status === 412 || error.text?.includes('Invalid grant')) {
+        toast({
+          title: "Email service configuration issue",
+          description: "Please try again later or contact me directly at samadinamdar009@gmail.com",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: "Please try again or contact me directly via email.",
+          variant: "destructive",
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
