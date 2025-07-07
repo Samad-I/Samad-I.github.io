@@ -59,346 +59,46 @@
   }
 }
 
-/* Enhanced smooth scrolling optimized for 144Hz */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prevent transition flash on page load - optimized for high refresh rate */
-.preload,
-.preload * {
-  transition: none !important;
-  animation-duration: 0s !important;
-  animation-delay: 0s !important;
-}
-
-/* Ultra-smooth 144Hz optimized transitions with hardware acceleration */
-*,
-*::before,
-*::after {
-  transition: 
-    background-color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.12s cubic-bezier(0.4, 0, 0.2, 1),
-    backdrop-filter 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: auto;
-  backface-visibility: hidden;
-  perspective: 1000px;
-  transform: translateZ(0);
-}
-
-/* Optimized root element transitions for 144Hz displays */
-html,
-body,
-[data-theme],
-.dark,
-:root {
-  transition: 
-    background-color 0.06s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.06s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* Professional hover effects with hardware acceleration */
-button,
-[role="button"],
-a:not([href^="#"]),
-input,
-textarea,
-select {
-  transition: 
-    background-color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.12s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateZ(0);
-  will-change: transform, box-shadow, background-color;
-}
-
-/* Enhanced navigation link hover effects */
-nav a {
-  transition: 
-    color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateZ(0);
-}
-
-nav a:hover {
-  transform: translateY(-1px) translateZ(0);
-}
-
-/* Smooth gradient transitions optimized for high refresh rate */
-.bg-gradient-to-br,
-.bg-gradient-to-r,
-[class*="gradient"] {
-  transition: 
-    background-color 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.08s cubic-bezier(0.4, 0, 0.2, 1),
-    background-position 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-  background-size: 200% 200%;
-}
-
-/* Optimized backdrop blur transitions */
-[class*="backdrop-blur"] {
-  transition: backdrop-filter 0.06s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Professional button hover effects */
-button:hover,
-[role="button"]:hover {
-  transform: translateY(-1px) translateZ(0);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
-
-button:active,
-[role="button"]:active {
-  transform: translateY(0) translateZ(0);
-  transition-duration: 0.06s;
-}
-
-/* Enhanced card hover effects with professional shadows */
-.group:hover {
-  transform: translateY(-3px) translateZ(0);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Smooth input focus effects */
-input:focus,
-textarea:focus,
-select:focus {
-  transform: translateZ(0);
-  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
-  border-color: hsl(var(--ring));
-}
-
-/* Professional icon hover effects */
-svg,
-[class*="lucide"] {
-  transition: 
-    transform 0.12s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.08s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateZ(0);
-}
-
-/* Dark mode toggle specific optimizations */
-[aria-label="Toggle dark mode"] {
-  transition: 
-    background-color 0.06s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.12s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[aria-label="Toggle dark mode"]:hover {
-  transform: scale(1.05) translateZ(0);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Custom animations optimized for 144Hz with professional easing */
+/* Custom animations */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px) translateZ(0);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) translateZ(0);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px) translateZ(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) translateZ(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95) translateZ(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateZ(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1) translateZ(0);
-    opacity: 1;
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.05) translateZ(0);
-    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
-/* Skill bar fill animation */
-@keyframes skill-fill {
-  from {
-    width: 0%;
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Professional animation classes */
 .animate-fade-in {
-  animation: fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fade-in 0.6s ease-out forwards;
 }
 
 .animate-pulse {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 4s ease-in-out infinite;
 }
 
-.animate-skill-fill {
-  animation: skill-fill 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-/* High refresh rate optimizations for 144Hz+ displays */
-@media (min-resolution: 120dpi) {
-  * {
-    transition-duration: 0.06s;
-  }
-  
-  button,
-  [role="button"],
-  a,
-  input,
-  textarea {
-    transition-duration: 0.08s;
-  }
-}
-
-/* Enhanced reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* Force hardware acceleration for all interactive elements */
-button,
-[role="button"],
-a,
-input,
-textarea,
-select,
-.group,
-[class*="hover:"],
-[class*="transition"],
-[class*="transform"],
-section,
-div[class*="bg-gradient"] {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Container and layout optimizations */
-nav,
-section,
-div,
-main,
-aside,
-header,
-footer {
-  transition: 
-    background-color 0.06s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.06s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.06s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Professional scale effects with smooth easing */
-.hover\:scale-105:hover {
-  transform: scale(1.05) translateZ(0);
-}
-
-.hover\:scale-110:hover {
-  transform: scale(1.1) translateZ(0);
-}
-
-/* Smooth text selection with brand colors */
-::selection {
-  background-color: hsl(var(--primary) / 0.15);
-  color: hsl(var(--primary-foreground));
-}
-
-/* Professional shadow transitions */
-.hover\:shadow-lg:hover,
-.hover\:shadow-xl:hover,
-.hover\:shadow-2xl:hover {
-  transition: box-shadow 0.12s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Enhanced scroll behavior for smooth navigation */
-.scroll-smooth {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
-}
-
-/* Professional focus styles */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid hsl(var(--ring));
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Enhanced backdrop blur for modern glass effect */
-.backdrop-blur-sm {
-  backdrop-filter: blur(4px) saturate(1.8);
-}
-
-.backdrop-blur-md {
-  backdrop-filter: blur(8px) saturate(1.8);
-}
-
-/* Professional gradient text effects */
-.bg-clip-text {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Optimized animations for better performance */
-@media (prefers-reduced-motion: no-preference) {
-  .animate-pulse {
-    animation: pulse 4s ease-in-out infinite;
-  }
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
