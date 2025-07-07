@@ -106,10 +106,12 @@ export const SkillsSection = () => {
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden shadow-inner">
                       <div 
-                        className="bg-gradient-to-r from-blue-500 via-purple-500 to-purple-600 h-2.5 rounded-full transition-all duration-1000 hover:from-blue-600 hover:via-purple-600 hover:to-purple-700 shadow-sm relative overflow-hidden"
+                        className="bg-gradient-to-r from-blue-500 via-purple-500 to-purple-600 h-2.5 rounded-full transition-all duration-1000 hover:from-blue-600 hover:via-purple-600 hover:to-purple-700 shadow-sm relative overflow-hidden animate-skill-fill"
                         style={{ 
                           width: `${skill.level}%`,
-                          animation: `skill-load-${skillIndex} 1.5s ease-out ${(index * 0.1) + (skillIndex * 0.2)}s both`
+                          animationDelay: `${(index * 0.1) + (skillIndex * 0.2)}s`,
+                          animationDuration: '1.5s',
+                          animationFillMode: 'both'
                         }}
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
@@ -122,17 +124,6 @@ export const SkillsSection = () => {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        ${skillCategories.map((category, categoryIndex) => 
-          category.skills.map((skill, skillIndex) => `
-            @keyframes skill-load-${skillIndex} {
-              from { width: 0%; }
-              to { width: ${skill.level}%; }
-            }
-          `).join('')
-        ).join('')}
-      `}</style>
     </section>
   );
 };
