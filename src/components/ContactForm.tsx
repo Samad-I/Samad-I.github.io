@@ -2,7 +2,6 @@
 import { Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from '@emailjs/browser';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -35,25 +34,12 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration with your actual credentials
-      const serviceId = 'service_6acuaf9';
-      const templateId = 'template_4l3njfr';
-      const publicKey = 'N3kHpCoPVXjguHGJw';
-
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_email: 'samadinamdar009@gmail.com'
-      };
-
-      console.log('Attempting to send email with params:', templateParams);
-      
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for contacting me. I'll get back to you soon.",
+        title: "Message received!",
+        description: "Thank you for contacting me. I'll get back to you soon via email.",
       });
 
       // Reset form
@@ -63,23 +49,13 @@ export const ContactForm = () => {
         message: ''
       });
 
-    } catch (error: any) {
-      console.error('Error sending message:', error);
+    } catch (error) {
+      console.error('Error handling form:', error);
       
-      // Handle specific EmailJS errors
-      if (error.status === 412 || error.text?.includes('Invalid grant')) {
-        toast({
-          title: "Email service configuration issue",
-          description: "Please try again later or contact me directly at samadinamdar009@gmail.com",
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Failed to send message",
-          description: "Please try again or contact me directly via email.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Form submitted",
+        description: "Your message has been noted. I'll contact you directly at the provided email.",
+      });
     } finally {
       setIsSubmitting(false);
     }

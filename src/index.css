@@ -75,28 +75,28 @@ body {
   animation-delay: 0s !important;
 }
 
-/* Optimized smooth dark mode transitions */
+/* Optimized smooth dark mode transitions - faster and smoother */
 *,
 *::before,
 *::after {
   transition: 
-    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 0.15s ease-out,
+    color 0.15s ease-out,
+    border-color 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    backdrop-filter 0.15s ease-out,
+    opacity 0.15s ease-out;
 }
 
-/* Specific optimizations for common elements */
+/* Specific optimizations for root elements */
 html,
 body,
 [data-theme],
 .dark,
 :root {
   transition: 
-    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-color 0.15s ease-out,
+    color 0.15s ease-out !important;
 }
 
 /* Smooth gradient transitions */
@@ -104,13 +104,13 @@ body,
 .bg-gradient-to-r,
 [class*="gradient"] {
   transition: 
-    background-image 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 0.15s ease-out,
+    opacity 0.15s ease-out;
 }
 
 /* Backdrop blur transitions */
 [class*="backdrop-blur"] {
-  transition: backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: backdrop-filter 0.15s ease-out;
 }
 
 /* Custom animations */
@@ -181,9 +181,23 @@ a,
 input,
 textarea {
   transition: 
-    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 0.15s ease-out,
+    color 0.15s ease-out,
+    border-color 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    transform 0.15s ease-out;
+}
+
+/* Optimized dark mode transitions for specific elements */
+nav,
+section,
+div,
+main,
+aside,
+header,
+footer {
+  transition: 
+    background-color 0.15s ease-out,
+    color 0.15s ease-out,
+    border-color 0.15s ease-out;
 }
