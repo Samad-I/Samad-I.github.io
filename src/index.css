@@ -75,97 +75,192 @@ body {
   animation-delay: 0s !important;
 }
 
-/* Optimized smooth dark mode transitions - faster and smoother */
+/* Ultra-smooth 144Hz optimized transitions */
 *,
 *::before,
 *::after {
   transition: 
-    background-color 0.15s ease-out,
-    color 0.15s ease-out,
-    border-color 0.15s ease-out,
-    box-shadow 0.15s ease-out,
-    backdrop-filter 0.15s ease-out,
-    opacity 0.15s ease-out;
+    background-color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.16s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: auto;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-/* Specific optimizations for root elements */
+/* Optimized root element transitions for 144Hz */
 html,
 body,
 [data-theme],
 .dark,
 :root {
   transition: 
-    background-color 0.15s ease-out,
-    color 0.15s ease-out !important;
+    background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Smooth gradient transitions */
+/* Professional hover effects with hardware acceleration */
+button,
+[role="button"],
+a:not([href^="#"]),
+input,
+textarea,
+select {
+  transition: 
+    background-color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.16s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: transform, box-shadow, background-color;
+}
+
+/* Enhanced navigation link hover effects */
+nav a {
+  transition: 
+    color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+nav a:hover {
+  transform: translateY(-1px) translateZ(0);
+}
+
+/* Smooth gradient transitions optimized for high refresh rate */
 .bg-gradient-to-br,
 .bg-gradient-to-r,
 [class*="gradient"] {
   transition: 
-    background-color 0.15s ease-out,
-    opacity 0.15s ease-out;
+    background-color 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    background-position 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: 200% 200%;
 }
 
-/* Backdrop blur transitions */
+/* Optimized backdrop blur transitions */
 [class*="backdrop-blur"] {
-  transition: backdrop-filter 0.15s ease-out;
+  transition: backdrop-filter 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Custom animations */
+/* Professional button hover effects */
+button:hover,
+[role="button"]:hover {
+  transform: translateY(-1px) translateZ(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active,
+[role="button"]:active {
+  transform: translateY(0) translateZ(0);
+  transition-duration: 0.08s;
+}
+
+/* Enhanced card hover effects */
+.group:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth input focus effects */
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateZ(0);
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+  border-color: hsl(var(--ring));
+}
+
+/* Professional icon hover effects */
+svg,
+[class*="lucide"] {
+  transition: 
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+/* Dark mode toggle specific optimizations */
+[aria-label="Toggle dark mode"] {
+  transition: 
+    background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[aria-label="Toggle dark mode"]:hover {
+  transform: scale(1.05) translateZ(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom animations optimized for 144Hz */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
   }
 }
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.02) translateZ(0);
   }
 }
 
 .animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
+  animation: fade-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .animate-pulse {
-  animation: pulse 4s ease-in-out infinite;
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Responsive design improvements */
-@media (max-width: 640px) {
-  .animate-fade-in {
-    animation: fade-in 0.4s ease-out forwards;
-  }
-}
-
-/* Ensure smooth scrolling on all devices */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
+/* High refresh rate optimizations */
+@media (min-resolution: 120dpi) {
   * {
-    transition-duration: 0ms !important;
+    transition-duration: 0.1s;
+  }
+  
+  button,
+  [role="button"],
+  a,
+  input,
+  textarea {
+    transition-duration: 0.12s;
   }
 }
 
-/* Force hardware acceleration for smooth animations */
-.animate-fade-in,
-.animate-pulse,
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Force hardware acceleration for all interactive elements */
+button,
+[role="button"],
+a,
+input,
+textarea,
+select,
+.group,
 [class*="hover:"],
 [class*="transition"],
 [class*="transform"] {
@@ -174,21 +269,7 @@ body,
   perspective: 1000px;
 }
 
-/* Enhanced button and interactive element transitions */
-button,
-[role="button"],
-a,
-input,
-textarea {
-  transition: 
-    background-color 0.15s ease-out,
-    color 0.15s ease-out,
-    border-color 0.15s ease-out,
-    box-shadow 0.15s ease-out,
-    transform 0.15s ease-out;
-}
-
-/* Optimized dark mode transitions for specific elements */
+/* Container and layout optimizations */
 nav,
 section,
 div,
@@ -197,7 +278,29 @@ aside,
 header,
 footer {
   transition: 
-    background-color 0.15s ease-out,
-    color 0.15s ease-out,
-    border-color 0.15s ease-out;
+    background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional scale effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05) translateZ(0);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1) translateZ(0);
+}
+
+/* Smooth text selection */
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
+}
+
+/* Professional shadow transitions */
+.hover\:shadow-lg:hover,
+.hover\:shadow-xl:hover,
+.hover\:shadow-2xl:hover {
+  transition: box-shadow 0.16s cubic-bezier(0.4, 0, 0.2, 1);
 }
