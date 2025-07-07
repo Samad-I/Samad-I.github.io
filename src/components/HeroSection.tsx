@@ -3,7 +3,7 @@ import { MapPin, Github, Linkedin, Mail } from 'lucide-react';
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="min-h-[80vh] flex items-center justify-center py-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-32 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
@@ -53,12 +53,12 @@ export const HeroSection = () => {
           
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative group">
-              <div className="w-72 h-72 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse p-1">
-                <div className="w-64 h-64 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner overflow-hidden">
+              <div className="w-80 h-80 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-500 shadow-2xl animate-pulse p-2">
+                <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-inner overflow-hidden">
                   <img 
                     src="/lovable-uploads/9db60c7a-b0bb-483f-9d3d-c13e74844c29.png" 
                     alt="Abutalaha Inamdar" 
-                    className="w-full h-full object-cover object-center rounded-full filter brightness-110 contrast-110"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
               </div>
